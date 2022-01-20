@@ -46,7 +46,9 @@
   
 
         <div class="modal-body d-flex justify-content-center">
-            <video id="player" width="436" height="320" autoplay muted></video>
+            <div class="media-wrapper video-wrapper">
+                <video class="video" id="player" width="436" height="320" autoplay muted></video>
+            </div>
             <canvas id="snapshot" width="436" height="320" style="display:none;"></canvas>
         </div>
 
@@ -64,7 +66,7 @@
         <h3 class="text-center ">Upload a Face Picture</h3>
         <div class="d-flex align-items-center justify-content-center">
             <div class="card mt-5 border-0" style="width:80%" >
-                <img id="img-preview" class="card-img-top" style="height:320px;" src="assets/img/img_avatar.png" alt="Card image">
+                <img id="img-preview" class="card-img-top" style="height:330px;" src="assets/img/img_avatar.png" alt="Card image">
                 <div class="card-body">
                     <div class="form-group">
                         <input type="text" class="form-control" id="person-name" placeholder="Person name" >
@@ -91,8 +93,10 @@
         <h3 class="text-center ">Face Recognition</h3>
         <div class="d-flex align-items-center justify-content-center">
             <div class="card mt-5 border-0" style="width:80%" >
-                <img id="img-preview-detect" class="card-img-top"  style="height:320px;" src="assets/img/img_avatar_detect.png" alt="Card image">
-                <video id="video" width="436" height="320" style="display:none;" autoplay muted></video>
+                <img id="img-preview-detect" class="card-img-top"  style="height:330px;" src="assets/img/img_avatar_detect.png" alt="Card image">
+                <div class="media-wrapper video-wrapper">
+                    <video class="video" id="video" width="436" height="320" style="display:none;" autoplay muted></video>
+                </div>
                 <div class="card-body">
                     <div style="margin-top:65px;">
                         <button type="button" onclick="startVideo()" class="start-btn">Start Detection</button>
